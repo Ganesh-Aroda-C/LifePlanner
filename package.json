@@ -1,0 +1,25 @@
+{
+  "name": "lifeos",
+  "version": "1.0.0",
+  "description": "LifeOS – Personal AI Life Assistant",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "build": "npm --prefix client run build"
+  },
+  "keywords": [
+    "lifeos",
+    "productivity",
+    "assistant",
+    "task-manager",
+    "calendar",
+    "reminders",
+    "mern"
+  ],
+  "author": "",
+  "license": "MIT"
+}
