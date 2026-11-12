@@ -1,7 +1,7 @@
 {
-  "name": "lifeos-server",
+  "name": "lifeplanner-server",
   "version": "1.0.0",
-  "description": "LifeOS - Personal AI Life Assistant REST API Server",
+  "description": "LifePlanner - Personal AI Life Assistant REST API Server",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

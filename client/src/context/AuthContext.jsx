@@ -5,16 +5,16 @@ export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    const saved = localStorage.getItem('lifeos_user');
+    const saved = localStorage.getItem('lifeplanner_user');
     return saved ? JSON.parse(saved) : null;
   });
-  const [token, setToken] = useState(() => localStorage.getItem('lifeos_token'));
+  const [token, setToken] = useState(() => localStorage.getItem('lifeplanner_token'));
   const [loading, setLoading] = useState(true);
 
   // Logout handler
   const logout = useCallback(() => {
-    localStorage.removeItem('lifeos_token');
-    localStorage.removeItem('lifeos_user');
+    localStorage.removeItem('lifeplanner_token');
+    localStorage.removeItem('lifeplanner_user');
     setToken(null);
     setUser(null);
   }, []);
@@ -22,12 +22,12 @@ export const AuthProvider = ({ children }) => {
   // Check auth validity on mount
   useEffect(() => {
     const initAuth = async () => {
-      const storedToken = localStorage.getItem('lifeos_token');
+      const storedToken = localStorage.getItem('lifeplanner_token');
       if (storedToken) {
         try {
           const data = await authService.getMe();
           setUser(data.user);
-          localStorage.setItem('lifeos_user', JSON.stringify(data.user));
+          localStorage.setItem('lifeplanner_user', JSON.stringify(data.user));
         } catch (error) {
           console.warn('Session expired or invalid, logging out...');
           logout();
@@ -42,14 +42,14 @@ export const AuthProvider = ({ children }) => {
     const handleAuthExpired = () => {
       logout();
     };
-    window.addEventListener('lifeos_auth_expired', handleAuthExpired);
-    return () => window.removeEventListener('lifeos_auth_expired', handleAuthExpired);
+    window.addEventListener('lifeplanner_auth_expired', handleAuthExpired);
+    return () => window.removeEventListener('lifeplanner_auth_expired', handleAuthExpired);
   }, [logout]);
 
   const login = async (email, password) => {
     const data = await authService.login({ email, password });
-    localStorage.setItem('lifeos_token', data.token);
-    localStorage.setItem('lifeos_user', JSON.stringify(data.user));
+    localStorage.setItem('lifeplanner_token', data.token);
+    localStorage.setItem('lifeplanner_user', JSON.stringify(data.user));
     setToken(data.token);
     setUser(data.user);
     return data;
@@ -57,8 +57,8 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (name, email, password) => {
     const data = await authService.register({ name, email, password });
-    localStorage.setItem('lifeos_token', data.token);
-    localStorage.setItem('lifeos_user', JSON.stringify(data.user));
+    localStorage.setItem('lifeplanner_token', data.token);
+    localStorage.setItem('lifeplanner_user', JSON.stringify(data.user));
     setToken(data.token);
     setUser(data.user);
     return data;
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
 
   const updateUserProfile = (updatedUser) => {
     setUser(updatedUser);
-    localStorage.setItem('lifeos_user', JSON.stringify(updatedUser));
+    localStorage.setItem('lifeplanner_user', JSON.stringify(updatedUser));
   };
 
   const value = {

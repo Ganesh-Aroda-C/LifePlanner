@@ -58,7 +58,7 @@ export const Assistant = () => {
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              LifeOS Copilot
+              LifePlanner Copilot
             </h1>
             <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-700 border border-indigo-200">
               Phase 6 Preview
@@ -85,7 +85,7 @@ export const Assistant = () => {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Unlike generic chat widgets, LifeOS Copilot is being engineered with strict data pipelines to your actual email, calendar, and task graph. In Phase 1, our primary focus is rock-solid foundational task and reminder architecture.
+            Unlike generic chat widgets, LifePlanner Copilot is being engineered with strict data pipelines to your actual email, calendar, and task graph. In Phase 1, our primary focus is rock-solid foundational task and reminder architecture.
           </p>
 
           <div className="p-3.5 bg-white/5 rounded-2xl border border-white/10 text-xs text-indigo-200 flex items-start gap-2.5">

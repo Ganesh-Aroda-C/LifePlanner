@@ -21,7 +21,7 @@ export const Sidebar = ({ onCloseMobile }) => {
     { name: 'Calendar', to: '/calendar', icon: Calendar },
     { name: 'Reminders', to: '/reminders', icon: Bell },
     {
-      name: 'LifeOS Copilot',
+      name: 'LifePlanner Copilot',
       to: '/assistant',
       icon: Sparkles,
       badge: 'Preview',
@@ -53,7 +53,7 @@ export const Sidebar = ({ onCloseMobile }) => {
         </div>
         <div>
           <h1 className="font-bold text-lg text-slate-900 tracking-tight flex items-center gap-1.5">
-            LifeOS
+            LifePlanner
             <span className="text-[10px] font-semibold tracking-wider uppercase px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-600 border border-indigo-100">
               v1.0
             </span>

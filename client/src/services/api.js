@@ -10,7 +10,7 @@ const api = axios.create({
 // Request interceptor to attach JWT token
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('lifeos_token');
+    const token = localStorage.getItem('lifeplanner_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -25,10 +25,10 @@ api.interceptors.response.use(
   (error) => {
     if (error.response && error.response.status === 401) {
       // Clear token if expired/invalid
-      if (localStorage.getItem('lifeos_token')) {
-        localStorage.removeItem('lifeos_token');
-        localStorage.removeItem('lifeos_user');
-        window.dispatchEvent(new Event('lifeos_auth_expired'));
+      if (localStorage.getItem('lifeplanner_token')) {
+        localStorage.removeItem('lifeplanner_token');
+        localStorage.removeItem('lifeplanner_user');
+        window.dispatchEvent(new Event('lifeplanner_auth_expired'));
       }
     }
     return Promise.reject(error);

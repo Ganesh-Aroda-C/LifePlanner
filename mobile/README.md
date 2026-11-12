@@ -1,9 +1,9 @@
-# LifeOS Android Companion App
+# LifePlanner Android Companion App
 
 ## Overview
-This directory contains the architecture and planning for the **LifeOS Android Companion** application (scheduled for Phase 4 of the LifeOS Roadmap).
+This directory contains the architecture and planning for the **LifePlanner Android Companion** application (scheduled for Phase 4 of the LifePlanner Roadmap).
 
-The mobile companion will be built with **React Native** and **Expo**, providing seamless native synchronisation with the LifeOS backend.
+The mobile companion will be built with **React Native** and **Expo**, providing seamless native synchronisation with the LifePlanner backend.
 
 ## Key Capabilities (Phase 4)
 - **Shared Authentication**: Secure JWT login synchronised with the web application.

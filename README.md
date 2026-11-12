@@ -1,4 +1,4 @@
-# LifeOS – Personal AI Life Assistant
+# LifePlanner – Personal AI Life Assistant
 
 > **Your life, organized intelligently.**
 > A modern productivity operating system designed to unify tasks, deadlines, schedules, and proactive background reminders into an intelligent personal cockpit.
@@ -19,11 +19,11 @@ Modern individuals—students, professionals, and creators—struggle with fragm
 - Desktop notifications are ignored or silenced because they lack intelligent escalation or snooze management.
 - Existing task managers are passive databases rather than proactive assistants that help users prioritize high-impact obligations.
 
-## 2. The LifeOS Solution
+## 2. The LifePlanner Solution
 
-**LifeOS** is an intelligent personal life management system that bridges active task execution with automated scheduling intelligence.
+**LifePlanner** is an intelligent personal life management system that bridges active task execution with automated scheduling intelligence.
 
-In **Phase 1 (Functional Foundation)**, LifeOS delivers a rock-solid, production-ready full-stack application featuring:
+In **Phase 1 (Functional Foundation)**, LifePlanner delivers a rock-solid, production-ready full-stack application featuring:
 - **Unified Task Management**: 4-tier urgency classification (`Critical`, `High`, `Medium`, `Low`), multi-category tagging, deadline tracking, and instant search.
 - **Dynamic Productivity Dashboard**: Real-time statistical metrics, completion velocity indicators, upcoming deadlines, and recent activity fed directly from MongoDB.
 - **Integrated Calendar Horizons**: Month, week, and day agenda views that map out deadlines and time commitments.
@@ -84,7 +84,7 @@ flowchart TD
     end
 
     subgraph Engine[Background Engine]
-        ReminderWorker[LifeOS Reminder Worker] -->|Poll Due Reminders| Mongo
+        ReminderWorker[LifePlanner Reminder Worker] -->|Poll Due Reminders| Mongo
         ReminderWorker -->|Atomic Status Update| Mongo
         ReminderWorker -->|Record Delivery History| Mongo
     end
@@ -94,14 +94,14 @@ flowchart TD
 
 ## 5. UI/UX & Screenshots
 
-LifeOS employs a clean, professional productivity SaaS interface designed with white/off-white backgrounds, subtle borders, rounded-2xl cards, and navy blue/indigo accents.
+LifePlanner employs a clean, professional productivity SaaS interface designed with white/off-white backgrounds, subtle borders, rounded-2xl cards, and navy blue/indigo accents.
 
 | View | Description | Preview |
 |---|---|---|
-| **Dashboard** | Real-time MongoDB metrics, completion velocity ring, upcoming deadlines, and quick task creation. | ![Dashboard Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifeOS+Dashboard+Preview) |
-| **Task Management** | Category tabs, multi-filter dropdowns, priority badges, and inline status toggles. | ![Tasks Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifeOS+Task+Board+Preview) |
-| **Calendar** | Month grid, weekly view, and daily agenda mapping all deadline milestones. | ![Calendar Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifeOS+Calendar+Preview) |
-| **Reminders Center** | Proactive alert management, snooze controls, and browser notification permission bridge. | ![Reminders Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifeOS+Reminders+Preview) |
+| **Dashboard** | Real-time MongoDB metrics, completion velocity ring, upcoming deadlines, and quick task creation. | ![Dashboard Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifePlanner+Dashboard+Preview) |
+| **Task Management** | Category tabs, multi-filter dropdowns, priority badges, and inline status toggles. | ![Tasks Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifePlanner+Task+Board+Preview) |
+| **Calendar** | Month grid, weekly view, and daily agenda mapping all deadline milestones. | ![Calendar Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifePlanner+Calendar+Preview) |
+| **Reminders Center** | Proactive alert management, snooze controls, and browser notification permission bridge. | ![Reminders Placeholder](https://via.placeholder.com/800x450/f8fafc/0f172a?text=LifePlanner+Reminders+Preview) |
 
 ---
 
@@ -168,8 +168,8 @@ lifeplanner/
 
 ### 1. Clone & Setup
 ```bash
-git clone https://github.com/your-username/LifeOS.git
-cd LifeOS
+git clone https://github.com/your-username/LifePlanner.git
+cd LifePlanner
 ```
 
 ### 2. Configure Environment Variables
@@ -183,12 +183,12 @@ Review `server/.env` parameters:
 ```env
 PORT=5000
 NODE_ENV=development
-MONGODB_URI=mongodb://localhost:27017/lifeos
-JWT_SECRET=super_secret_jwt_key_lifeos_dev_2026
+MONGODB_URI=mongodb://localhost:27017/lifeplanner
+JWT_SECRET=super_secret_jwt_key_lifeplanner_dev_2026
 JWT_EXPIRES_IN=7d
 CLIENT_URL=http://localhost:5173
 ```
-> **Tip:** If local MongoDB is not running, LifeOS will automatically activate an embedded `MongoMemoryServer` in development mode, allowing instant evaluation without manual database installation!
+> **Tip:** If local MongoDB is not running, LifePlanner will automatically activate an embedded `MongoMemoryServer` in development mode, allowing instant evaluation without manual database installation!
 
 ### 3. Install Dependencies
 ```bash
@@ -249,7 +249,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 When committing this project to your repository, use these structured semantic commits:
 
 ```bash
-git commit -m "feat(arch): initialize LifeOS modular workspace structure and documentation"
+git commit -m "feat(arch): initialize LifePlanner modular workspace structure and documentation"
 git commit -m "feat(server): implement Express server, Mongoose models, and resilient DB config"
 git commit -m "feat(auth): implement JWT authentication, salted bcrypt hashing, and auth middleware"
 git commit -m "feat(tasks): implement comprehensive task CRUD APIs with strict user isolation"

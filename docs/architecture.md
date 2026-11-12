@@ -1,6 +1,6 @@
-# LifeOS System Architecture
+# LifePlanner System Architecture
 
-LifeOS is engineered as a secure, high-performance personal life assistant designed to consolidate tasks, deadlines, scheduled commitments, and proactive reminders into an integrated system.
+LifePlanner is engineered as a secure, high-performance personal life assistant designed to consolidate tasks, deadlines, scheduled commitments, and proactive reminders into an integrated system.
 
 ---
 
@@ -22,7 +22,7 @@ flowchart TD
     end
 
     subgraph Engine["Background Processing"]
-        ReminderWorker["LifeOS Reminder Engine (Worker Job)"]
+        ReminderWorker["LifePlanner Reminder Engine (Worker Job)"]
         QueueInterface["Queue Abstraction (BullMQ-Ready)"]
     end
 

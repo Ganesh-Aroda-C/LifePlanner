@@ -42,7 +42,7 @@ export const Login = () => {
           Welcome back
         </h2>
         <p className="text-sm text-slate-500 mt-1">
-          Log in to your LifeOS account to view your daily schedule.
+          Log in to your LifePlanner account to view your daily schedule.
         </p>
       </div>
 

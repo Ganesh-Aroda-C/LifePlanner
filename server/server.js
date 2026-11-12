@@ -17,7 +17,7 @@ const startServer = async () => {
 
     // 3. Start HTTP Listener
     const server = app.listen(PORT, () => {
-      log.info(`🚀 LifeOS Backend running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
+      log.info(`🚀 LifePlanner Backend running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
       log.info(`📍 Health check: http://localhost:${PORT}/api/health`);
     });
 

@@ -68,8 +68,8 @@ export const Tasks = () => {
 
   useEffect(() => {
     const handleGlobalUpdate = () => fetchTasks();
-    window.addEventListener('lifeos_tasks_updated', handleGlobalUpdate);
-    return () => window.removeEventListener('lifeos_tasks_updated', handleGlobalUpdate);
+    window.addEventListener('lifeplanner_tasks_updated', handleGlobalUpdate);
+    return () => window.removeEventListener('lifeplanner_tasks_updated', handleGlobalUpdate);
   }, [fetchTasks]);
 
   const handleCreateOrUpdate = async (taskData) => {
@@ -79,14 +79,14 @@ export const Tasks = () => {
       await taskService.createTask(taskData);
     }
     fetchTasks();
-    window.dispatchEvent(new CustomEvent('lifeos_tasks_updated'));
+    window.dispatchEvent(new CustomEvent('lifeplanner_tasks_updated'));
   };
 
   const handleToggleComplete = async (taskId) => {
     try {
       await taskService.toggleComplete(taskId);
       fetchTasks();
-      window.dispatchEvent(new CustomEvent('lifeos_tasks_updated'));
+      window.dispatchEvent(new CustomEvent('lifeplanner_tasks_updated'));
     } catch (err) {
       console.error('Failed to toggle completion:', err);
     }
@@ -97,7 +97,7 @@ export const Tasks = () => {
       try {
         await taskService.deleteTask(taskId);
         fetchTasks();
-        window.dispatchEvent(new CustomEvent('lifeos_tasks_updated'));
+        window.dispatchEvent(new CustomEvent('lifeplanner_tasks_updated'));
       } catch (err) {
         console.error('Failed to delete task:', err);
       }

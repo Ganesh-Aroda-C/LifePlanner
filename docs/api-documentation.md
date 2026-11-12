@@ -1,4 +1,4 @@
-# LifeOS REST API Documentation
+# LifePlanner REST API Documentation
 
 Base URL: `http://localhost:5000/api`
 

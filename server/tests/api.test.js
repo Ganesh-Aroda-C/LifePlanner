@@ -32,7 +32,7 @@ test('API Health Check - returns 200 and healthy status', async () => {
   const res = await request(app).get('/api/health');
   assert.equal(res.status, 200);
   assert.equal(res.body.status, 'healthy');
-  assert.equal(res.body.service, 'LifeOS API');
+  assert.equal(res.body.service, 'LifePlanner API');
 });
 
 test('Auth Workflow - Register, Login, and Profile', async () => {

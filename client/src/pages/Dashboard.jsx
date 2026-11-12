@@ -66,15 +66,15 @@ export const Dashboard = () => {
 
     // Listen for global task updates
     const handleUpdate = () => fetchDashboardData(true);
-    window.addEventListener('lifeos_tasks_updated', handleUpdate);
-    return () => window.removeEventListener('lifeos_tasks_updated', handleUpdate);
+    window.addEventListener('lifeplanner_tasks_updated', handleUpdate);
+    return () => window.removeEventListener('lifeplanner_tasks_updated', handleUpdate);
   }, [fetchDashboardData]);
 
   const handleQuickToggleComplete = async (taskId) => {
     try {
       await taskService.toggleComplete(taskId);
       fetchDashboardData(true);
-      window.dispatchEvent(new CustomEvent('lifeos_tasks_updated'));
+      window.dispatchEvent(new CustomEvent('lifeplanner_tasks_updated'));
     } catch (err) {
       console.error('Failed to toggle task:', err);
     }
@@ -418,18 +418,18 @@ export const Dashboard = () => {
             )}
           </div>
 
-          {/* LifeOS Copilot Preview Teaser */}
+          {/* LifePlanner Copilot Preview Teaser */}
           <div className="bg-gradient-to-br from-indigo-50 to-blue-50/50 rounded-2xl p-5 border border-indigo-100 text-xs space-y-3">
             <div className="flex items-center gap-2 text-indigo-700 font-semibold">
               <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
-              <span>LifeOS AI Assistant</span>
+              <span>LifePlanner AI Assistant</span>
               <span className="text-[9px] uppercase px-1.5 py-0.2 rounded bg-indigo-200/60 font-bold text-indigo-800">
                 Phase 6 Preview
               </span>
             </div>
 
             <p className="text-slate-600 leading-relaxed">
-              In upcoming releases, LifeOS will automatically parse your incoming emails, WhatsApp announcements, and calendar commitments to build your daily timeline for you.
+              In upcoming releases, LifePlanner will automatically parse your incoming emails, WhatsApp announcements, and calendar commitments to build your daily timeline for you.
             </p>
 
             <Link to="/assistant" className="block pt-1">

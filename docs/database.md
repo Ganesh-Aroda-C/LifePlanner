@@ -1,6 +1,6 @@
-# LifeOS Database Design & Schema Specification
+# LifePlanner Database Design & Schema Specification
 
-LifeOS uses **MongoDB** with **Mongoose ODM** to maintain a flexible, document-based data architecture with strict validation and user data isolation.
+LifePlanner uses **MongoDB** with **Mongoose ODM** to maintain a flexible, document-based data architecture with strict validation and user data isolation.
 
 ---
 

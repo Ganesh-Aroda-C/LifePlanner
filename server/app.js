@@ -53,7 +53,7 @@ app.get('/api/health', (req, res) => {
     status: 'healthy',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    service: 'LifeOS API',
+    service: 'LifePlanner API',
     version: '1.0.0',
   });
 });

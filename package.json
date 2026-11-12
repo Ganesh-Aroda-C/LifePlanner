@@ -1,7 +1,7 @@
 {
-  "name": "lifeos",
+  "name": "lifeplanner",
   "version": "1.0.0",
-  "description": "LifeOS – Personal AI Life Assistant",
+  "description": "LifePlanner – Personal AI Life Assistant",
   "private": true,
   "scripts": {
     "server": "npm --prefix server start",
@@ -12,7 +12,7 @@
     "build": "npm --prefix client run build"
   },
   "keywords": [
-    "lifeos",
+    "lifeplanner",
     "productivity",
     "assistant",
     "task-manager",

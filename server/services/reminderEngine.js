@@ -43,7 +43,7 @@ const processDueReminders = async () => {
                 deliveredAt: new Date(),
                 channel: reminder.type || 'browser',
                 status: 'delivered',
-                details: `Dispatched by LifeOS ReminderEngine (Scheduled: ${reminder.remindAt.toISOString()})`,
+                details: `Dispatched by LifePlanner ReminderEngine (Scheduled: ${reminder.remindAt.toISOString()})`,
               },
             },
           },

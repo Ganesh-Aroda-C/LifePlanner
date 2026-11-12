@@ -1,6 +1,6 @@
-# LifeOS Engineering Roadmap (Phases 1 — 6)
+# LifePlanner Engineering Roadmap (Phases 1 — 6)
 
-This document establishes the strategic, phased architecture for **LifeOS – Personal AI Life Assistant**. Each phase builds systematically on top of previously verified components without premature or brittle dependencies.
+This document establishes the strategic, phased architecture for **LifePlanner – Personal AI Life Assistant**. Each phase builds systematically on top of previously verified components without premature or brittle dependencies.
 
 ---
 
@@ -23,7 +23,7 @@ This document establishes the strategic, phased architecture for **LifeOS – Pe
 
 - **OAuth 2.0 Integration**: Granular Google OAuth flow requesting read-only Gmail access with AES-256 token encryption at rest.
 - **Message Parsing Pipeline**: Pattern extractors for invoice dates, assignment due dates, and meeting invites.
-- **Task Proposal Staging Area**: Incoming items appear as *Draft Suggestions* in the user's LifeOS inbox, requiring 1-click confirmation before creating tasks.
+- **Task Proposal Staging Area**: Incoming items appear as *Draft Suggestions* in the user's LifePlanner inbox, requiring 1-click confirmation before creating tasks.
 - **Zero Privacy Compromise**: Emails are parsed ephemerally; raw message contents are never persisted or shared.
 
 ---
@@ -60,6 +60,6 @@ This document establishes the strategic, phased architecture for **LifeOS – Pe
 ## Phase 6 — Autonomous AI Personal Assistant `[STATUS: PLANNED]`
 **Core Objective:** Conversational life copilot that provides context-aware guidance and summaries.
 
-- **Conversational Interface**: Natural language interface in LifeOS with structured JSON function calling.
+- **Conversational Interface**: Natural language interface in LifePlanner with structured JSON function calling.
 - **Daily Audio/Text Briefings**: "Good morning Alex. You have 2 critical deadlines today and a 3-hour open block between 2 PM and 5 PM."
 - **Personalized Prioritization**: Machine learning suggestions on when the user is most productive based on historical completion records.

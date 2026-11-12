@@ -20,7 +20,7 @@ export const BrowserNotificationPrompt = () => {
       const res = await Notification.requestPermission();
       setPermission(res);
       if (res === 'granted') {
-        new Notification('LifeOS Notifications Enabled', {
+        new Notification('LifePlanner Notifications Enabled', {
           body: 'You will receive reminders when tasks and deadlines approach while your browser is open.',
           icon: '/favicon.ico',
         });
@@ -32,7 +32,7 @@ export const BrowserNotificationPrompt = () => {
 
   const sendTestNotification = () => {
     if (permission === 'granted') {
-      new Notification('LifeOS Test Reminder', {
+      new Notification('LifePlanner Test Reminder', {
         body: 'System notifications are operating correctly!',
         icon: '/favicon.ico',
       });

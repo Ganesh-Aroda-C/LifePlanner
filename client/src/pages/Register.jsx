@@ -55,7 +55,7 @@ export const Register = () => {
           Create your account
         </h2>
         <p className="text-sm text-slate-500 mt-1">
-          Start organizing your life with LifeOS today.
+          Start organizing your life with LifePlanner today.
         </p>
       </div>
 

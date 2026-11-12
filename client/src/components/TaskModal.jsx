@@ -100,7 +100,7 @@ export const TaskModal = ({
       isOpen={isOpen}
       onClose={onClose}
       title={isEdit ? 'Edit Task' : 'Create New Task'}
-      subtitle={isEdit ? 'Update details and schedule' : 'Add a task to your LifeOS queue'}
+      subtitle={isEdit ? 'Update details and schedule' : 'Add a task to your LifePlanner queue'}
       maxWidth="max-w-xl"
     >
       <form onSubmit={handleSubmit} className="space-y-4">

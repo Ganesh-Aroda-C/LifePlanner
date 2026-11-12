@@ -12,7 +12,7 @@ export const AppLayout = () => {
   const handleCreateTask = async (taskData) => {
     await taskService.createTask(taskData);
     // Broadcast event so active views (dashboard, tasks, calendar) refresh immediately
-    window.dispatchEvent(new CustomEvent('lifeos_tasks_updated'));
+    window.dispatchEvent(new CustomEvent('lifeplanner_tasks_updated'));
   };
 
   return (

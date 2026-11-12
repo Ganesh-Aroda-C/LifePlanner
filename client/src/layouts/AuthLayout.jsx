@@ -46,7 +46,7 @@ export const AuthLayout = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-xl font-bold tracking-tight">LifeOS</h2>
+            <h2 className="text-xl font-bold tracking-tight">LifePlanner</h2>
             <p className="text-xs text-slate-400">Personal AI Life Assistant</p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export const AuthLayout = () => {
 
         {/* Footer */}
         <div className="text-xs text-slate-500 z-10">
-          © {new Date().getFullYear()} LifeOS. Designed for modern productivity.
+          © {new Date().getFullYear()} LifePlanner. Designed for modern productivity.
         </div>
       </div>
 
@@ -102,7 +102,7 @@ export const AuthLayout = () => {
                 <path d="M12 2v20" />
               </svg>
             </div>
-            <span className="text-xl font-bold text-slate-900">LifeOS</span>
+            <span className="text-xl font-bold text-slate-900">LifePlanner</span>
           </div>
 
           <Outlet />

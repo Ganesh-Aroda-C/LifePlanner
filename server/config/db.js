@@ -4,7 +4,7 @@ let memoryServer = null;
 
 const connectDB = async () => {
   try {
-    const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/lifeos';
+    const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/lifeplanner';
     const useMemory = process.env.USE_MEMORY_DB === 'true';
 
     if (useMemory) {
